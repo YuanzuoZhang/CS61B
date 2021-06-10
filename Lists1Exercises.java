@@ -18,6 +18,13 @@ public class Lists1Exercises {
       * the 'new' keyword. */
     public static IntList dincrList(IntList L, int x) {
         /* Your code here. */
+        int i = L.size();
+        IntList Q = L;
+        while (i > 0) {
+            Q.first = Q.first + x;
+            Q = Q.rest;
+            i = i - 1;
+        }
         return L;
     }
 
@@ -33,9 +40,11 @@ public class Lists1Exercises {
         // code for incrList and dincrList into IntList.java and
         // run it in the visualizer.
         //System.out.println(L.get(1));
-        System.out.println(incrList(L, 3).get(0));
-        System.out.println(incrList(L, 3).get(1));
-        System.out.println(incrList(L, 3).get(2));
-        // System.out.println(dincrList(L, 3));        
+        //System.out.println(incrList(L, 3).get(0));
+        //System.out.println(incrList(L, 3).get(1));
+        //System.out.println(incrList(L, 3).get(2));
+        System.out.println(dincrList(L, 3).size());        
+        //System.out.println(dincrList(L, 3).get(1));  
+        //System.out.println(dincrList(L, 3).get(2));  
     }
 }
